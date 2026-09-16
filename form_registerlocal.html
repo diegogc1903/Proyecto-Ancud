@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Ancud - Directorio Turístico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Función simple para mostrar/ocultar el horario de almuerzo
+        function toggleLunchHours() {
+            const checkBox = document.getElementById("toggle-lunch");
+            const lunchDiv = document.getElementById("lunch-time-container");
+            if (checkBox.checked) {
+                lunchDiv.classList.remove("hidden");
+                lunchDiv.classList.add("flex");
+            } else {
+                lunchDiv.classList.add("hidden");
+                lunchDiv.classList.remove("flex");
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-md w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-indigo-600 text-2xl"></i>
+                    <a href="/index.html" class="font-bold text-xl tracking-tight text-indigo-900">Ancud<span class="text-indigo-600">Mágico</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Explorar</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Categorías</a>
+                    <button class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition font-medium shadow-sm">
+                        Agregar un lugar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN DE FORMULARIO -->
+    <div id="formulario" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-gray-900">Registra o Reclama tu Negocio</h2>
+            <p class="mt-4 text-lg text-gray-600">Completa la información a continuación para tomar el control de tu perfil, actualizar tus datos y atraer más clientes.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-8">
+                        <form action="#" class="space-y-8">
+                
+                <!-- 1. Datos del Propietario -->
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-900 border-b pb-2 mb-4"><i class="fa-solid fa-user-shield mr-2"></i>Datos del Propietario</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo del Dueño/Representante</label>
+                            <input id="nombre_dueno" type="text" placeholder="Ej. Juan Pérez" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico (Para tu cuenta)</label>
+                            <input id="correo" type="email" placeholder="ejemplo@correo.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Información del Negocio -->
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-900 border-b pb-2 mb-4"><i class="fa-solid fa-store mr-2"></i>Información del Negocio</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nombre del Lugar</label>
+                            <input id="nombre_local" type="text" placeholder="Ej. Restaurante Sabores Chilotes" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">RUT de Empresa (Opcional si es EIRL/SPA)</label>
+                            <input id="rut" type="text" placeholder="Ej. 76.123.456-7" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Categoría Principal</label>
+                            <select id="categoria" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition bg-white">
+                                <option value="" disabled selected>Selecciona una categoría...</option>
+                                <option value="Restaurante">Restaurante / Comida</option>
+                                <option value="Cafetería">Cafetería</option>
+                                <option value="Hospedaje">Hospedaje / Cabañas</option>
+                                <option value="Atracción">Atracción Turística</option>
+                                <option value="Tour">Tour Operador</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono de Contacto / WhatsApp</label>
+                            <input id="telefono" type="tel" placeholder="+56 9 1234 5678" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Dirección Exacta</label>
+                            <input id="direccion" type="text" placeholder="Ej. Calle Arturo Prat 123, Ancud" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Descripción Breve (¿Qué ofrece tu negocio?)</label>
+                            <textarea id="descripcion" rows="3" placeholder="Describe los platos, servicios o experiencia que ofreces..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Enlace a Redes Sociales (Instagram, Facebook o Web)</label>
+                            <input id="redes" type="url" placeholder="https://instagram.com/tu_negocio" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Horarios (Se mantienen igual por ahora) -->
+                <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                    <h3 class="text-lg font-bold text-indigo-900 border-b border-indigo-200 pb-2 mb-4"><i class="fa-regular fa-clock mr-2"></i>Horarios de Atención</h3>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Hora de Apertura</label>
+                            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Hora de Cierre</label>
+                            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition bg-white">
+                        </div>
+                    </div>
+
+                    <!-- Toggle Horario de Almuerzo/Colación -->
+                    <div class="mb-4 flex items-center">
+                        <input type="checkbox" id="toggle-lunch" onchange="toggleLunchHours()" class="w-5 h-5 text-indigo-600 rounded focus:ring-indigo-500 border-gray-300 cursor-pointer">
+                        <label for="toggle-lunch" class="ml-2 block text-sm font-bold text-gray-800 cursor-pointer">
+                            El negocio cierra por horario de colación / almuerzo
+                        </label>
+                    </div>
+
+                    <!-- Contenedor oculto por defecto para horas de almuerzo -->
+                    <div id="lunch-time-container" class="hidden grid-cols-2 gap-6 p-4 bg-white rounded-lg border border-gray-200 shadow-inner">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">Cierra a las:</label>
+                            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">Vuelve a abrir a las:</label>
+                            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="pt-4">
+                    <button type="button" onclick="enviarFormulario()" class="w-full bg-indigo-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition duration-300 flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Registro
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-4">Al enviar, verificaremos tu información para darte acceso al panel de control de tu negocio.</p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+    <script>
+    async function enviarFormulario() {
+        // Extrae los valores de los inputs usando sus IDs
+        const datos = {
+            nombre_dueno: document.getElementById('nombre_dueno').value,
+            correo: document.getElementById('correo').value,
+            nombre_local: document.getElementById('nombre_local').value,
+            rut: document.getElementById('rut').value,
+            categoria: document.getElementById('categoria').value,
+            telefono: document.getElementById('telefono').value,
+            direccion: document.getElementById('direccion').value
+        };
+
+        // NUEVO: Freno de validación
+        if (datos.categoria === "") {
+            alert("Por favor, selecciona una categoría válida para tu local.");
+            return; // Esta instrucción cancela el envío inmediatamente
+        }
+
+        try {
+            const respuesta = await fetch('http://localhost:8000/users-register/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos)
+            });
+
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                alert("¡Éxito! " + resultado.mensaje);
+                // Opcional: Limpiar el formulario después de enviarlo
+                document.querySelector("form").reset();
+            } else {
+                alert("Error en la validación de datos. Revisa que todos los campos sean correctos.");
+            }
+        } catch (error) {
+            alert("Error de conexión. Asegúrate de que el servidor de FastAPI (Uvicorn) esté encendido.");
+            console.error("Detalle del error:", error);
+        }
+    }
+    </script>
+
+</html>

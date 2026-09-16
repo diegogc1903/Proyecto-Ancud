@@ -1,0 +1,29 @@
+[
+    {
+        "nombre_dueno": "SDFSDFSD",
+        "correo": "FSDFSDF",
+        "nombre_local": "DFSDFSDF",
+        "rut": 4234234234,
+        "categoria": "Selecciona una categoría...",
+        "telefono": 324234234,
+        "direccion": "SDFSDFSD"
+    },
+    {
+        "nombre_dueno": "SDFSDF",
+        "correo": "SDFSFSDFS",
+        "nombre_local": "FSDFSDF",
+        "rut": 123123123,
+        "categoria": "Cafetería",
+        "telefono": 569123123123,
+        "direccion": "DFSDFSD"
+    },
+    {
+        "nombre_dueno": "asdasdasd",
+        "correo": "asdad",
+        "nombre_local": "sdfsdfsdf",
+        "rut": 3424234,
+        "categoria": "Restaurante",
+        "telefono": 234234234,
+        "direccion": "sdfsdf"
+    }
+]

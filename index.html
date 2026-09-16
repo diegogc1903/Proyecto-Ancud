@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Ancud - Directorio Turístico</title>
+    <!-- Usamos Tailwind CSS para el diseño rápido y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-indigo-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-indigo-900">Ancud<span class="text-indigo-600">Mágico</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Explorar</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Categorías</a>
+                    <a href="/form_registerlocal.html" class="text-indigo-600 font-semibold hover:text-indigo-800 transition">¿Eres dueño? Ingresa aquí</a>
+                    <button class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition font-medium shadow-sm">
+                        Agregar un lugar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Buscador Principal) -->
+    <div class="relative bg-indigo-900 pt-24 pb-12 sm:pt-32 sm:pb-24 overflow-hidden mt-16">
+        <!-- Imagen de fondo simulada con un gradiente y opacidad -->
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Encuentra lo mejor de Ancud
+            </h1>
+            <p class="text-xl text-indigo-200 mb-10 max-w-2xl mx-auto">
+                Explora las mejores cafeterías, restaurantes y atracciones. Apoya el turismo local de Chiloé.
+            </p>
+            
+            <!-- Buscador -->
+            <div class="max-w-3xl mx-auto bg-white rounded-full p-2 flex shadow-xl">
+                <div class="flex-grow flex items-center pl-4">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                    <input type="text" placeholder="¿Qué buscas? Ej. Café, Mariscos, Fuerte..." class="w-full py-3 px-4 outline-none text-gray-700 rounded-l-full">
+                </div>
+                <div class="hidden sm:flex border-l border-gray-300 items-center pl-4 bg-gray-50">
+                    <i class="fa-solid fa-location-dot text-gray-400"></i>
+                    <select class="py-3 px-4 outline-none text-gray-700 bg-transparent">
+                        <option>Todo Ancud</option>
+                        <option>Centro</option>
+                        <option>Costanera</option>
+                        <option>Lechagua</option>
+                    </select>
+                </div>
+                <button class="bg-indigo-600 text-white rounded-full px-8 py-3 font-semibold hover:bg-indigo-700 transition">
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Puntos de Interés / Directorio -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Descubre lugares populares</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Tarjeta 1: Negocio Reclamado -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition group">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Café" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                        <i class="fa-solid fa-check-circle mr-1"></i> Verificado por el dueño
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Cafetería</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Café del Muelle</h3>
+                        </div>
+                        <div class="flex items-center bg-yellow-100 px-2 py-1 rounded text-yellow-700 text-sm font-bold">
+                            <i class="fa-solid fa-star text-xs mr-1"></i> 4.8
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Costanera Norte, Ancud</p>
+                    <div class="flex items-center text-sm text-green-600 font-medium mb-4">
+                        <i class="fa-regular fa-clock mr-2"></i> Abierto ahora - Cierra a las 20:00
+                    </div>
+                    <a href="#" class="block text-center border border-indigo-600 text-indigo-600 rounded-lg py-2 hover:bg-indigo-50 transition font-medium">Ver perfil</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Negocio NO Reclamado (El foco de tu idea) -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition group relative">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurante" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute top-4 left-4 bg-gray-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                        No reclamado
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 uppercase tracking-wider">Restaurante</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Sabores Chilotes</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Calle Arturo Prat, Ancud</p>
+                    
+                    <!-- Alerta para que el dueño lo reclame -->
+                    <div class="bg-orange-50 border-l-4 border-orange-500 p-3 mb-4">
+                        <p class="text-xs text-orange-700 font-medium">
+                            ¿Eres el administrador de este local?
+                        </p>
+                        <a href="#" class="text-sm font-bold text-orange-600 hover:underline flex items-center mt-1">
+                            Reclamar este negocio <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <a href="#" class="block text-center border border-gray-300 text-gray-600 rounded-lg py-2 hover:bg-gray-50 transition font-medium">Ver información básica</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Lugar Turístico -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition group">
+                <div class="h-48 bg-gray-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1623940176868-b8ceb5b3a4cb?auto=format&fit=crop&w=800&q=80" alt="Fuerte" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 grayscale-[20%]">
+                    <div class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                        Lugar Público
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Monumento Histórico</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Fuerte San Antonio</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Sector Alto, Ancud</p>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                        Histórico fuerte español del siglo XIX con impresionantes vistas a la bahía. Ideal para fotografías y conocer la historia local.
+                    </p>
+                    <a href="#" class="block text-center border border-indigo-600 text-indigo-600 rounded-lg py-2 hover:bg-indigo-50 transition font-medium">Cómo llegar</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Banner Call to Action para dueños -->
+    <div class="bg-indigo-50 border-y border-indigo-100 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-4">¿Tienes un negocio en Ancud?</h2>
+            <p class="text-lg text-indigo-700 mb-8">
+                Toma el control de tu presencia digital. Sube fotos de tu menú, actualiza tus horarios de apertura y responde reseñas de los visitantes de Chiloé totalmente gratis.
+            </p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-indigo-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition duration-300">
+                    Añadir mi negocio
+                </button>
+                <button class="bg-white text-indigo-600 border border-indigo-200 px-8 py-3 rounded-full font-bold shadow-sm hover:bg-indigo-50 transition duration-300">
+                    Saber más
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
