@@ -25,5 +25,14 @@
         "categoria": "Restaurante",
         "telefono": 234234234,
         "direccion": "sdfsdf"
+    },
+    {
+        "nombre_dueno": "sdfsd",
+        "correo": "fsdfsd",
+        "nombre_local": "fsdf",
+        "rut": 123213,
+        "categoria": "Restaurante",
+        "telefono": 12312312,
+        "direccion": "sdfs"
     }
 ]
